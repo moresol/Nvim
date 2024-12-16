@@ -1,0 +1,10 @@
+{
+    "completion.autoRequire": false,
+    "diagnostics.disable": [
+        "inject-field",
+        "missing-fields",
+        "assign-type-mismatch",
+        "undefined-field",
+        "redundant-parameter"
+    ]
+}

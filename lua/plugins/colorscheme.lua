@@ -1,0 +1,169 @@
+return {
+  "sainnhe/sonokai",
+  lazy = false,
+  priority = 1000,
+  config = function()
+    -- Optionally configure and load the colorscheme
+    -- directly inside the plugin declaration.
+    vim.g.sonokai_transparent_background = "1"
+    vim.g.sonokai_enable_italic = true
+    vim.g.sonokai_style = "andromeda"
+    vim.cmd.colorscheme("sonokai")
+  end,
+}
+-- return {
+--   {
+--     "diegoulloao/neofusion.nvim",
+--     priority = 1000,
+--     config = function()
+--       require("neofusion").setup({
+--         transparent_mode = true,
+--         terminal_colors = true, -- add neovim terminal colors
+--         undercurl = true,
+--         uderline = true,
+--         italic = {
+--           strings = true,
+--           emphasis = true,
+--           comments = true,
+--           operators = false,
+--           folds = true,
+--         },
+--         overrides = {
+--           Comment = { fg = "#82817d" },
+--           SignColumn = { fg = "#294395" },
+--         },
+--       })
+--       vim.o.background = "dark"
+--       vim.cmd([[ colorscheme neofusion ]])
+--     end,
+--   },
+-- }
+-- return {
+--   {
+--     "rose-pine/neovim",
+--     name = "rose-pine",
+--     priority = 1000,
+--     config = function()
+--       return {
+--         require("rose-pine").setup({
+--           variant = "auto",
+--           dark_variant = "main",
+--           disable_background = true,
+--           disable_nc_background = true,
+--           disable_float_background = true,
+--           groups = {
+--             background = "none",
+--             background_nc = "none",
+--             panel = "surface",
+--             panel_nc = "base",
+--             border = "none",
+--             comment = "muted",
+--             link = "iris",
+--             punctuation = "subtle",
+--             error = "love",
+--             hint = "iris",
+--             info = "foam",
+--             warn = "gold",
+--             headings = {
+--               h1 = "iris",
+--               h2 = "foam",
+--               h3 = "rose",
+--               h4 = "gold",
+--               h5 = "pine",
+--               h6 = "foam",
+--             },
+--           },
+--           highlight_groups = {
+--             -- blend colours against the 'base' background
+--             ["String"] = { fg = "#eacb64" },
+--             ["Number"] = { fg = "#ba9cf3" },
+--             ColorColumn = { bg = "none" }, -- Color line inside neotree
+--             CursorLine = { bg = "none" },
+--             Search = { bg = "pine", inherit = false },
+--             FloatBorder = { bg = "none" },
+--             LineNr = { fg = "#515151" }, -- Numbers on the left side
+--             -- nvim-cmp
+--             -- winhighlight = "Normal:CmpPmenu,CursorLine:CmpSel,Search:None",
+--             CmpPmenu = { bg = "#212121" },
+--             CmpSel = { bg = "pine" },
+--             CmpDoc = { bg = "#212121" },
+--           },
+--         }),
+--       }
+--     end,
+--   },
+--   {
+--     "LazyVim/LazyVim",
+--     opts = {
+--       colorscheme = "rose-pine",
+--     },
+--   },
+-- }
+
+-- return{ // Modify for transparency if main rose pine is broken
+--   'rose-pine/neovim',
+--   name = 'rose-pine',
+--   config = function()
+--     vim.cmd('colorscheme rose-pine')
+--   end
+-- }
+-- return {
+--   {
+--     "folke/tokyonight.nvim",
+--     priority = 1000, -- make sure to load this before all the other start plugins
+--     config = function()
+--       local bg = "none"
+--       local bg_dark = "#011423"
+--       local bg_highlight = "#143652"
+--       local bg_search = "#0A64AC"
+--       local bg_visual = "#275378"
+--       local fg = "#CBE0F0"
+--       local fg_dark = "#B4D0E9"
+--       local fg_gutter = "#627E97"
+--       local border = "#547998"
+--
+--       require("tokyonight").setup({
+--         style = "night",
+--         on_colors = function(colors)
+--           colors.bg = bg
+--           colors.bg_dark = bg_dark
+--           colors.bg_float = bg_dark
+--           colors.bg_highlight = bg_highlight
+--           colors.bg_popup = bg_dark
+--           colors.bg_search = bg_search
+--           colors.bg_sidebar = bg_dark
+--           colors.bg_statusline = bg_dark
+--           colors.bg_visual = bg_visual
+--           colors.border = border
+--           colors.fg = fg
+--           colors.fg_dark = fg_dark
+--           colors.fg_float = fg
+--           colors.fg_gutter = fg_gutter
+--           colors.fg_sidebar = fg_dark
+--         end,
+--       })
+--       -- load the colorscheme here
+--       vim.cmd([[colorscheme tokyonight]])
+--     end,
+--   },
+-- }
+-- return {
+--   {
+--     "catppuccin",
+--     priority = 1000,
+--     opts = {
+--       transparent_background = true,
+--       integration = {
+--         telescope = true,
+--         mason = true,
+--         neotest = true,
+--       },
+--     },
+--   },
+--   {
+--     "LazyVim/LazyVim",
+--     opts = {
+--       colorscheme = "catppuccin-mocha",
+--     },
+--   },
+-- }
